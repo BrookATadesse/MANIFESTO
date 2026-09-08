@@ -3,65 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>a new kind of meaning — concrete poem</title>
-  <meta name="description" content="An experimental typography concrete poem after First Things First 2000." />
+  <title>a new kind of meaning</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
+  <p class="source">First Things First 2000</p>
 
-  <header class="meta">
-    <p class="meta__src">First Things First 2000 · Barnbrook et al.</p>
-    <p class="meta__mode" id="modeLabel">priority: commercial</p>
-  </header>
-
-  <main id="stage" class="stage" role="img" aria-label="Interactive concrete poem. Click to reverse priorities.">
-    <div class="orbit" id="orbit" aria-hidden="true"></div>
-
-    <section class="core" id="core">
-      <p class="line line--small" data-line="we propose a">we propose a</p>
-      <h1 class="line line--hero" data-line="reversal of priorities">
-        <span class="word" data-word="reversal">reversal</span>
-        <span class="word" data-word="of">of</span>
-        <span class="word" data-word="priorities">priorities</span>
-      </h1>
-      <p class="line line--mid" data-line="toward">toward</p>
-      <h2 class="line line--meaning" id="meaning">
-        <span class="glyph">a</span>
-        <span class="glyph">n</span>
-        <span class="glyph">e</span>
-        <span class="glyph">w</span>
-        <span class="space">&nbsp;</span>
-        <span class="glyph">k</span>
-        <span class="glyph">i</span>
-        <span class="glyph">n</span>
-        <span class="glyph">d</span>
-        <span class="space">&nbsp;</span>
-        <span class="glyph">o</span>
-        <span class="glyph">f</span>
-        <span class="space">&nbsp;</span>
-        <span class="glyph glyph--last">m</span>
-        <span class="glyph glyph--last">e</span>
-        <span class="glyph glyph--last">a</span>
-        <span class="glyph glyph--last">n</span>
-        <span class="glyph glyph--last">i</span>
-        <span class="glyph glyph--last">n</span>
-        <span class="glyph glyph--last">g</span>
-      </h2>
-    </section>
-
-    <aside class="footnote" id="footnote">
-      manufacturing demand for things that are inessential at best
-    </aside>
+  <main>
+    <p class="small">we propose a</p>
+    <h1>reversal of priorities</h1>
+    <p class="small">toward</p>
+    <h2>a new kind of <span>meaning</span></h2>
+    <p class="note" id="note">manufacturing demand for things that are inessential at best</p>
+    <button type="button" id="flip">flip the line</button>
   </main>
-
-  <footer class="hud">
-    <button type="button" id="reverseBtn">reverse priorities</button>
-    <p class="hud__hint">click anywhere · move the pointer · press <kbd>R</kbd></p>
-  </footer>
 
   <script src="assets/js/main.js"></script>
 </body>
