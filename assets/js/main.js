@@ -120,4 +120,12 @@
   }
 
   requestAnimationFrame(tick);
+    const hintKey = document.querySelector("kbd");
+  if (hintKey) {
+    hintKey.style.cursor = "pointer";
+    hintKey.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggle();
+    });
+  }
 })();
