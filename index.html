@@ -4,23 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>a new kind of meaning</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #1a0d0c;
+      color: #f6ead6;
+      font-family: Georgia, serif;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    p { margin: 0.6rem 0; }
+
+    .source {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #e0b07a;
+    }
+
+    .small {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #ff7a45;
+    }
+
+    h1 {
+      margin: 0.4rem 0;
+      font-size: 64px;
+      line-height: 0.95;
+      color: #f0b429;
+    }
+
+    h2 {
+      margin: 0.4rem 0 1.4rem;
+      font-size: 36px;
+      font-style: italic;
+      font-weight: normal;
+      color: #f3e0c4;
+    }
+
+    h2 span { color: #ff6b3d; }
+
+    .note {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #c49a7a;
+    }
+
+    button {
+      margin-top: 1.2rem;
+      padding: 8px 14px;
+      border: 1px solid #f0b429;
+      background: transparent;
+      color: #f6ead6;
+      font-family: Arial, sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    body.flipped { background: #0b1c1b; }
+    body.flipped .small { color: #7ee0c8; }
+    body.flipped h1 { color: #7ee0c8; }
+    body.flipped h2 span { color: #e8c36a; }
+    body.flipped .note { color: #7ee0c8; }
+    body.flipped button { border-color: #7ee0c8; }
+  </style>
 </head>
 <body>
   <p class="source">First Things First 2000</p>
 
-  <main>
-    <p class="small">we propose a</p>
-    <h1>reversal of priorities</h1>
-    <p class="small">toward</p>
-    <h2>a new kind of <span>meaning</span></h2>
-    <p class="note" id="note">manufacturing demand for things that are inessential at best</p>
-    <button type="button" id="flip">flip the line</button>
-  </main>
+  <p class="small">we propose a</p>
+  <h1>reversal<br>of<br>priorities</h1>
+  <p class="small">toward</p>
+  <h2>a new kind of <span>meaning</span></h2>
+  <p class="note" id="note">manufacturing demand for things that are inessential at best</p>
 
-  <script src="assets/js/main.js"></script>
+  <p>
+    <button type="button" id="flip">flip the line</button>
+  </p>
+
+  <script>
+    const button = document.getElementById("flip");
+    const note = document.getElementById("note");
+
+    button.onclick = function () {
+      const on = document.body.classList.toggle("flipped");
+      note.textContent = on
+        ? "the exploration and production of a new kind of meaning"
+        : "manufacturing demand for things that are inessential at best";
+      button.textContent = on ? "flip it back" : "flip the line";
+    };
+  </script>
 </body>
 </html>
